@@ -58,7 +58,7 @@ function hasInteracted() {
                 throw new Error("You can not like your own post");
             }
 
-            //по погрешка getByIdKey го бх направил винаги да ми връща масив ако не намери ключа и затова не ми хвърляше грешка при грешен ключ и не съм се усетил да актуализирам името на ключа!
+            //по погрешка getByIdKey го бях направил винаги да ми връща масив ако не намери ключа и затова не ми хвърляше грешка при грешен ключ и не съм се усетил да актуализирам името на ключа!
             const allInteractors = await getByIdKey(req.params.id, 'likes');//бях забравил да актуализирам името на ключа
             
             const allInteractorsArray = allInteractors.map(int => int.toString());
